@@ -1,6 +1,5 @@
 import styles from './Puzzle4.module.css';
 import React from 'react';
-// import PropTypes from 'prop-types';
 import AbstractPuzzle from './../../AbstractPuzzle.js';
 import HackableButton from '../../../components/HackableButton/HackableButton.js';
 

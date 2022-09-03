@@ -1,8 +1,6 @@
 import styles from './Puzzle8.module.css';
 import React from 'react';
-// import PropTypes from 'prop-types';
 import AbstractPuzzle from './../../AbstractPuzzle.js';
-import HackableButton from '../../../components/HackableButton/HackableButton.js';
 import {FormControl} from 'react-bootstrap';
 
 export default class Puzzle8 extends AbstractPuzzle {

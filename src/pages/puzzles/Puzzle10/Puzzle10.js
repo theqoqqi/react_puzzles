@@ -1,9 +1,6 @@
 import styles from './Puzzle10.module.css';
 import React from 'react';
-// import PropTypes from 'prop-types';
 import AbstractPuzzle from './../../AbstractPuzzle.js';
-import HackableButton from '../../../components/HackableButton/HackableButton.js';
-import {FormControl} from 'react-bootstrap';
 import FormRange from 'react-bootstrap/FormRange';
 
 export default class Puzzle10 extends AbstractPuzzle {
