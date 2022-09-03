@@ -10,6 +10,26 @@ export default class AbstractPuzzle extends React.Component {
 
     };
 
+    componentDidMount() {
+        let callback = () => {
+            this.onAnimationFrame();
+            this.frameRequestId = requestAnimationFrame(callback);
+        };
+
+        callback();
+    }
+
+    componentWillUnmount() {
+        if (this.frameRequestId) {
+            cancelAnimationFrame(this.frameRequestId);
+            this.frameRequestId = null;
+        }
+    }
+
+    onAnimationFrame() {
+
+    }
+
     solve() {
         let puzzleId = this.constructor.name;
         let puzzles = LocalStorage.get('puzzles', {});

@@ -40,14 +40,9 @@ export default class Puzzle3 extends AbstractPuzzle {
         };
     }
 
-    componentDidMount() {
-        let callback = () => {
-            this.updateText();
-            this.checkIfSolved();
-            requestAnimationFrame(callback);
-        };
-
-        callback();
+    onAnimationFrame() {
+        this.updateText();
+        this.checkIfSolved();
     }
 
     updateText() {
