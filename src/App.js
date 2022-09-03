@@ -1,25 +1,36 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react';
+import {
+    BrowserRouter,
+    Routes,
+    Route,
+} from 'react-router-dom';
+import PuzzleList from './pages/PuzzleList/PuzzleList.js';
+import {Container} from 'react-bootstrap';
+import ResetResults from './pages/ResetResults/ResetResults.js';
+import PuzzleResult from './pages/PuzzleResult/PuzzleResult.js';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <Container className='d-flex flex-column justify-content-center align-items-center vh-100'>
+            <BrowserRouter>
+                <Routes>
+                    <Route path='/' element={<PuzzleList />} />
+                    <Route path='/puzzles' element={<PuzzleList />} />
+                    {PuzzleList.allPuzzles.map(puzzle =>
+                        <Route
+                            key={puzzle.name}
+                            path={'/puzzles/' + puzzle.name.toLowerCase()}
+                            element={React.createElement(puzzle)}
+                        />
+                    )}
+                    <Route path='/result' element={<PuzzleResult />} />
+                    <Route path='/reset' element={<ResetResults />} />
+                </Routes>
+            </BrowserRouter>
+        </Container>
+    );
 }
 
 export default App;
+

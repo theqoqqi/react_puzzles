@@ -1,0 +1,39 @@
+.tip {
+    display: block !important;
+}
+
+.tip2 {
+    display: none !important;
+}
+
+.button {
+    display: none !important;
+}
+
+@media (max-width: 800px) {
+    .tip {
+        display: none !important;
+    }
+
+    .tip2 {
+        display: block !important;
+    }
+
+    .button {
+        display: none !important;
+    }
+}
+
+@media (max-width: 400px) {
+    .tip {
+        display: none !important;
+    }
+
+    .tip2 {
+        display: none !important;
+    }
+
+    .button {
+        display: block !important;
+    }
+}

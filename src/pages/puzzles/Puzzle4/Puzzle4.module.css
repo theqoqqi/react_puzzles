@@ -1,0 +1,28 @@
+.wrapper {
+    position: absolute;
+    right: 350px;
+    bottom: 150px;
+
+    width: 115px;
+    height: 38px;
+
+    cursor: pointer;
+}
+
+.wrapper .button {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+
+    transform: translate(-50%, -50%);
+
+    transition: .1s all;
+    pointer-events: none;
+}
+
+.wrapper:hover .button {
+    color: var(--bs-btn-hover-color);
+    background-color: var(--bs-btn-hover-bg);
+    border-color: var(--bs-btn-hover-border-color);
+    box-shadow: var(--bs-btn-focus-box-shadow);
+}
