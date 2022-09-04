@@ -1,14 +1,12 @@
+import './AbstractPuzzle.css';
 import React from 'react';
-import PropTypes from 'prop-types';
 import LocalStorage from '../core/LocalStorage.js';
 
 export default class AbstractPuzzle extends React.Component {
 
     static title = 'Empty title';
 
-    static propTypes = {
-
-    };
+    #done = false;
 
     componentDidMount() {
         let callback = () => {
@@ -30,7 +28,15 @@ export default class AbstractPuzzle extends React.Component {
 
     }
 
+    get isDone() {
+        return this.#done;
+    }
+
     solve() {
+        this.#makeDone('solved', () => this.#solve());
+    }
+
+    #solve() {
         let puzzleId = this.constructor.name;
         let puzzles = LocalStorage.get('puzzles', {});
 
@@ -44,9 +50,35 @@ export default class AbstractPuzzle extends React.Component {
     }
 
     fail() {
+        this.#makeDone('failed', () => this.#fail());
+    }
+
+    #fail() {
         let puzzleId = this.constructor.name;
 
         window.location.href = '/result?type=failed&puzzle=' + puzzleId.toLowerCase();
+    }
+
+    #makeDone(className, callback) {
+        if (this.#done) {
+            return;
+        }
+
+        this.#done = true;
+
+        this.animateBody(className, 2000, callback);
+    }
+
+    animateBody(className, delay, callback) {
+        this.addBodyClass(className);
+
+        setTimeout(() => {
+            callback();
+        }, delay);
+    }
+
+    addBodyClass(className) {
+        document.body.classList.add(className);
     }
 
     render() {

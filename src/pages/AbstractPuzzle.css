@@ -1,0 +1,14 @@
+body.solved, body.failed {
+    filter: blur(2px);
+    pointer-events: none;
+
+    transition: 2s all;
+}
+
+body.solved {
+    background-color: #eeffee;
+}
+
+body.failed {
+    background-color: #ffeeee;
+}
