@@ -1,0 +1,1 @@
+window.sum = (a, b) => null;

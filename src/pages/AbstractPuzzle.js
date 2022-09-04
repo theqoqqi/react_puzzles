@@ -1,12 +1,19 @@
 import './AbstractPuzzle.css';
 import React from 'react';
 import LocalStorage from '../core/LocalStorage.js';
+import axios from 'axios';
 
 export default class AbstractPuzzle extends React.Component {
 
     static title = 'Empty title';
 
     #done = false;
+
+    constructor(props) {
+        super(props);
+
+        this.loadedScripts = [];
+    }
 
     componentDidMount() {
         let callback = () => {
@@ -22,10 +29,42 @@ export default class AbstractPuzzle extends React.Component {
             cancelAnimationFrame(this.frameRequestId);
             this.frameRequestId = null;
         }
+
+        this.unloadScripts();
     }
 
     onAnimationFrame() {
 
+    }
+
+    getPuzzleFile(fileName, options = {}) {
+        return axios.get(`/scripts/puzzles/${this.puzzleId}/${fileName}`, options);
+    }
+
+    loadScript(fileName) {
+        this.getPuzzleFile(fileName)
+            .then(response => {
+                let script = document.createElement('script');
+                script.innerHTML = response.data;
+                document.body.appendChild(script);
+                this.loadedScripts.push(script);
+            });
+    }
+
+    unloadScripts() {
+        this.loadedScripts.forEach(script => {
+            script.parentElement.removeChild(script);
+        });
+
+        this.loadedScripts.length = 0;
+    }
+
+    get internalName() {
+        return this.constructor.name;
+    }
+
+    get puzzleId() {
+        return this.internalName.toLowerCase();
     }
 
     get isDone() {
@@ -37,16 +76,15 @@ export default class AbstractPuzzle extends React.Component {
     }
 
     #solve() {
-        let puzzleId = this.constructor.name;
         let puzzles = LocalStorage.get('puzzles', {});
 
-        puzzles[puzzleId] = {
+        puzzles[this.internalName] = {
             finished: true,
         };
 
         LocalStorage.set('puzzles', puzzles);
 
-        window.location.href = '/result?type=solved&puzzle=' + puzzleId.toLowerCase();
+        window.location.href = '/result?type=solved&puzzle=' + this.puzzleId;
     }
 
     fail() {
@@ -54,9 +92,7 @@ export default class AbstractPuzzle extends React.Component {
     }
 
     #fail() {
-        let puzzleId = this.constructor.name;
-
-        window.location.href = '/result?type=failed&puzzle=' + puzzleId.toLowerCase();
+        window.location.href = '/result?type=failed&puzzle=' + this.puzzleId;
     }
 
     #makeDone(className, callback) {

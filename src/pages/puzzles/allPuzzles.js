@@ -14,3 +14,8 @@ export { default as Puzzle12 } from '../puzzles/Puzzle12/Puzzle12.js';
 export { default as Puzzle13 } from '../puzzles/Puzzle13/Puzzle13.js';
 export { default as Puzzle14 } from '../puzzles/Puzzle14/Puzzle14.js';
 export { default as Puzzle15 } from '../puzzles/Puzzle15/Puzzle15.js';
+export { default as Puzzle16 } from '../puzzles/Puzzle16/Puzzle16.js';
+export { default as Puzzle17 } from '../puzzles/Puzzle17/Puzzle17.js';
+export { default as Puzzle18 } from '../puzzles/Puzzle18/Puzzle18.js';
+export { default as Puzzle19 } from '../puzzles/Puzzle19/Puzzle19.js';
+export { default as Puzzle20 } from '../puzzles/Puzzle20/Puzzle20.js';
