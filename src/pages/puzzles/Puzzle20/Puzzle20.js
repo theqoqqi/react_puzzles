@@ -35,9 +35,7 @@ export default class Puzzle20 extends AbstractPuzzle {
     render() {
         return (
             <div>
-                <button>
-                    Нажми меня
-                </button>
+                Попробуй реши меня
             </div>
         );
     }
