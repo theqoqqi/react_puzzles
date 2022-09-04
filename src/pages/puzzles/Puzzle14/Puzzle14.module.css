@@ -1,0 +1,46 @@
+
+.ball {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    top: 0;
+
+    width: 80px;
+    height: 80px;
+
+    background-color: #5da94c;
+    border: 2px solid #282c34;
+    border-radius: 40px;
+
+    text-align: center;
+    color: white;
+
+    transition: 0.3s all;
+
+    z-index: 1;
+    cursor: pointer;
+}
+
+.box {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    left: 120px;
+    bottom: 50px;
+
+    width: 200px;
+    height: 120px;
+
+    background-color: #6fa0e9;
+    border: 2px solid #282c34;
+    border-radius: 0 0 8px 8px;
+    border-top: none;
+
+    text-align: center;
+    color: white;
+
+    cursor: pointer;
+}

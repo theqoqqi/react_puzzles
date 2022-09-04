@@ -1,0 +1,87 @@
+.container {
+    width: 300px;
+    height: 400px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: stretch;
+
+    margin: 16px;
+    padding: 16px !important;
+
+    border: 2px solid #282c34;
+    border-radius: 16px;
+}
+
+.arena {
+    position: relative;
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.arena > * {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2px solid #282c34;
+
+    text-align: center;
+    color: white;
+
+    cursor: pointer;
+}
+
+.ball {
+    align-items: flex-start;
+
+    top: 0;
+
+    width: 64px;
+    height: 64px;
+
+    background-color: #5da94c;
+    border-radius: 32px;
+
+    z-index: 1;
+
+    transition: 0.5s top cubic-bezier(1, 1.69, 0.63, 0.66);
+}
+
+.wall {
+    top: 100px;
+
+    width: 100%;
+    height: 32px;
+
+    background-color: gray;
+
+    border-radius: 8px;
+}
+
+.gates {
+    bottom: 0;
+
+    width: 100%;
+    height: 80px;
+
+    background-color: #6fa0e9;
+
+    border-radius: 0 0 8px 8px;
+    border-top: none;
+}
+
+.ball.active {
+    top: 36px;
+}
+
+.ball.active.noWall {
+    top: 282px;
+}

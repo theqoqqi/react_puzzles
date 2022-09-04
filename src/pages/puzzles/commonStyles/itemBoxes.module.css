@@ -1,0 +1,39 @@
+.box {
+    margin: 16px;
+    padding: 16px !important;
+
+    border: 2px solid #282c34;
+    border-radius: 16px;
+}
+
+.item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 40px;
+    width: 100%;
+
+    background-color: #eee;
+    border: 2px solid #354351;
+    border-radius: 8px;
+
+    cursor: pointer;
+}
+
+.item + .item {
+    margin-top: 16px;
+}
+
+.item:not(:only-child) {
+    background-color: #a9d9a9;
+    border-color: #265826;
+}
+
+.item:hover {
+    background-color: #ddd;
+}
+
+.item:hover:not(:only-child) {
+    background-color: #87c887;
+}

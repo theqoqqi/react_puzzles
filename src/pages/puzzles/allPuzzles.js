@@ -9,3 +9,8 @@ export { default as Puzzle7 } from '../puzzles/Puzzle7/Puzzle7.js';
 export { default as Puzzle8 } from '../puzzles/Puzzle8/Puzzle8.js';
 export { default as Puzzle9 } from '../puzzles/Puzzle9/Puzzle9.js';
 export { default as Puzzle10 } from '../puzzles/Puzzle10/Puzzle10.js';
+export { default as Puzzle11 } from '../puzzles/Puzzle11/Puzzle11.js';
+export { default as Puzzle12 } from '../puzzles/Puzzle12/Puzzle12.js';
+export { default as Puzzle13 } from '../puzzles/Puzzle13/Puzzle13.js';
+export { default as Puzzle14 } from '../puzzles/Puzzle14/Puzzle14.js';
+export { default as Puzzle15 } from '../puzzles/Puzzle15/Puzzle15.js';
