@@ -69,7 +69,7 @@ export default class Puzzle18 extends AbstractPuzzle {
                     </div>
                 )}
                 <Button className='btn-sm w-100' onClick={() => this.onClick()}>
-                    Тык
+                    sum
                 </Button>
             </div>
         );
