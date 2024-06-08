@@ -38,7 +38,7 @@ export default class AbstractPuzzle extends React.Component {
     }
 
     getPuzzleFile(fileName, options = {}) {
-        return axios.get(`/scripts/puzzles/${this.puzzleId}/${fileName}`, options);
+        return axios.get(`/react_puzzles/scripts/puzzles/${this.puzzleId}/${fileName}`, options);
     }
 
     loadScript(fileName) {
@@ -60,7 +60,7 @@ export default class AbstractPuzzle extends React.Component {
     }
 
     get internalName() {
-        return this.constructor.name;
+        return this.constructor.internalName;
     }
 
     get puzzleId() {
@@ -84,7 +84,7 @@ export default class AbstractPuzzle extends React.Component {
 
         LocalStorage.set('puzzles', puzzles);
 
-        window.location.href = '../result?type=solved&puzzle=' + this.puzzleId;
+        this.props.navigate('../result?type=solved&puzzle=' + this.puzzleId);
     }
 
     fail() {
@@ -92,7 +92,7 @@ export default class AbstractPuzzle extends React.Component {
     }
 
     #fail() {
-        window.location.href = '../result?type=failed&puzzle=' + this.puzzleId;
+        this.props.navigate('../result?type=failed&puzzle=' + this.puzzleId);
     }
 
     #makeDone(className, callback) {
@@ -102,7 +102,10 @@ export default class AbstractPuzzle extends React.Component {
 
         this.#done = true;
 
-        this.animateBody(className, 2000, callback);
+        this.animateBody(className, 2000, () => {
+            this.removeBodyClass(className);
+            callback();
+        });
     }
 
     animateBody(className, delay, callback) {
@@ -115,6 +118,10 @@ export default class AbstractPuzzle extends React.Component {
 
     addBodyClass(className) {
         document.body.classList.add(className);
+    }
+
+    removeBodyClass(className) {
+        document.body.classList.remove(className);
     }
 
     render() {

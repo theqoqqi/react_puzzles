@@ -3,7 +3,7 @@ import React from 'react';
 import PuzzleLink from '../../components/PuzzleLink/PuzzleLink.js';
 import {Link} from 'react-router-dom';
 import LocalStorage from '../../core/LocalStorage.js';
-import * as allPuzzles from '../puzzles/allPuzzles.js';
+import getAllPuzzles from '../puzzles/getAllPuzzles.js';
 
 export default class PuzzleList extends React.Component {
 
@@ -11,17 +11,29 @@ export default class PuzzleList extends React.Component {
         // TODO: propTypes
     };
 
-    static allPuzzles = Object.values(allPuzzles).sort((a, b) => {
-        let aNumber = +a.name.slice(6);
-        let bNumber = +b.name.slice(6);
+    constructor(props) {
+        super(props);
+        this.state = {
+            puzzles: [],
+            loading: true,
+        };
+    }
 
-        return aNumber - bNumber;
-    });
+    async componentDidMount() {
+        this.setState({
+            puzzles: await getAllPuzzles(),
+            loading: false,
+        });
+    }
 
     render() {
-        let puzzles = PuzzleList.allPuzzles;
+        if (this.state.loading) {
+            return <div>Loading...</div>;
+        }
+
+        let puzzles = this.state.puzzles;
         let storagePuzzles = LocalStorage.get('puzzles', {});
-        let lastSolvedPuzzle = puzzles.filter(p => !!storagePuzzles[p.name]).pop();
+        let lastSolvedPuzzle = puzzles.filter(p => !!storagePuzzles[p.internalName]).pop();
         let lastSolvedIndex = puzzles.indexOf(lastSolvedPuzzle);
 
         if (LocalStorage.get('devMode', false)) {
@@ -31,7 +43,7 @@ export default class PuzzleList extends React.Component {
         return (
             <div className='d-flex flex-column'>
                 {puzzles.map((puzzle, index) =>
-                    <PuzzleLink key={puzzle.name} puzzle={puzzle} locked={index > lastSolvedIndex + 1} />
+                    <PuzzleLink key={puzzle.internalName} puzzle={puzzle} locked={index > lastSolvedIndex + 1} />
                 )}
 
                 <Link to='/reset' className='link-danger'>

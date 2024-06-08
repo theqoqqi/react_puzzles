@@ -17,7 +17,7 @@ export default class PuzzleLink extends React.Component {
 
     render() {
         let puzzles = LocalStorage.get('puzzles', {});
-        let puzzleId = this.props.puzzle.name;
+        let puzzleId = this.props.puzzle.internalName;
         let puzzleData = puzzles[puzzleId] ?? {};
         let className = this.props.locked
             ? 'link-secondary ' + styles.disabledLink
