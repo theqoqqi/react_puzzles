@@ -28,7 +28,7 @@ export default class PuzzleLink extends React.Component {
                 to={'/puzzles/' + puzzleId.toLowerCase()}
                 className={className}
             >
-                {this.props.puzzle.title} {puzzleData.finished && '(решена)'}
+                {this.props.puzzle.title} {puzzleData.finished && '(solved)'}
             </Link>
         );
     }

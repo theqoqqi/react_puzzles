@@ -5,7 +5,7 @@ import FormRange from 'react-bootstrap/FormRange';
 
 export default class Puzzle10 extends AbstractPuzzle {
 
-    static title = 'Головоломка 10';
+    static title = 'Puzzle 10';
 
     static propTypes = {
         ...AbstractPuzzle.propTypes,

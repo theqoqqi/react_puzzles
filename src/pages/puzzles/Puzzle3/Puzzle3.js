@@ -5,7 +5,7 @@ import HackableButton from '../../../components/HackableButton/HackableButton.js
 
 export default class Puzzle3 extends AbstractPuzzle {
 
-    static title = 'Головоломка 3';
+    static title = 'Puzzle 3';
 
     static propTypes = {
         ...AbstractPuzzle.propTypes,
@@ -15,12 +15,12 @@ export default class Puzzle3 extends AbstractPuzzle {
         super(props);
 
         this.texts = [
-            this.createText(0, 'Не жми меня'),
-            this.createText(200, 'Не нажимай'),
-            this.createText(1500, 'НЕ НАЖИМАЙ'),
-            this.createText(3000, 'Не...'),
-            this.createText(5000, 'БЫСТРО! НЕ НАЖИМАЙ!'),
-            this.createText(6000, 'Молодец'),
+            this.createText(0, 'Don\'t press me'),
+            this.createText(200, 'Don\'t press'),
+            this.createText(1500, 'DON\'T PRESS'),
+            this.createText(3000, 'Don\'t...'),
+            this.createText(5000, 'FAST! DON\'T CLICK!'),
+            this.createText(6000, 'Well done'),
         ];
 
         this.reversedTexts = this.texts.slice().reverse();

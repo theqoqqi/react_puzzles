@@ -5,7 +5,7 @@ import {FormControl} from 'react-bootstrap';
 
 export default class Puzzle8 extends AbstractPuzzle {
 
-    static title = 'Головоломка 8';
+    static title = 'Puzzle 8';
 
     static propTypes = {
         ...AbstractPuzzle.propTypes,
@@ -44,7 +44,7 @@ export default class Puzzle8 extends AbstractPuzzle {
                     type='password'
                     value={this.state.second}
                     onInput={e => this.onInput(e)}
-                    placeholder='Введите пароль'
+                    placeholder='Enter the password'
                     style={{
                         minWidth: 200,
                     }}

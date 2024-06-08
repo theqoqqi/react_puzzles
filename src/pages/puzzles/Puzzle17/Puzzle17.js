@@ -4,7 +4,7 @@ import AbstractPuzzle from './../../AbstractPuzzle.js';
 
 export default class Puzzle17 extends AbstractPuzzle {
 
-    static title = 'Головоломка 17';
+    static title = 'Puzzle 17';
 
     static propTypes = {
         ...AbstractPuzzle.propTypes,
@@ -21,7 +21,7 @@ export default class Puzzle17 extends AbstractPuzzle {
     render() {
         return (
             <div>
-                Реши меня полностью
+                Solve me totally
             </div>
         );
     }

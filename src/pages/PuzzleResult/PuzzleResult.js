@@ -9,12 +9,12 @@ import {Link, useSearchParams} from 'react-router-dom';
 let results = {
     solved: {
         classes: 'text-uppercase text-success',
-        title: 'Решено!',
+        title: 'Solved!',
         showRestart: false,
     },
     failed: {
         classes: 'text-uppercase text-danger',
-        title: 'Неудача',
+        title: 'Failure',
         showRestart: true,
     }
 };
@@ -32,11 +32,11 @@ export default function PuzzleResult(props) {
             </h5>
             {result.showRestart &&
                 <Link to={'/puzzles/' + puzzle}>
-                    Заново
+                    Restart
                 </Link>
             }
             <Link to='/'>
-                Продолжить
+                Continue
             </Link>
         </div>
     );

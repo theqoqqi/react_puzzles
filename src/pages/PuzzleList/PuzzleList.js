@@ -35,7 +35,7 @@ export default class PuzzleList extends React.Component {
                 )}
 
                 <Link to='/reset' className='link-danger'>
-                    Сбросить результаты
+                    Reset progress
                 </Link>
             </div>
         );

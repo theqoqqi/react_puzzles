@@ -26,10 +26,10 @@ export default class ResetResults extends React.Component {
         return (
             <div className='d-flex flex-column'>
                 <Link to='/' className='link-danger' onClick={clearStorage}>
-                    Подтвердить
+                    Confirm
                 </Link>
                 <Link to='/' className='link-secondary'>
-                    Назад
+                    Back
                 </Link>
             </div>
         );

@@ -5,7 +5,7 @@ import {FormControl} from 'react-bootstrap';
 
 export default class Puzzle6 extends AbstractPuzzle {
 
-    static title = 'Головоломка 6';
+    static title = 'Puzzle 6';
 
     static propTypes = {
         ...AbstractPuzzle.propTypes,
@@ -41,7 +41,7 @@ export default class Puzzle6 extends AbstractPuzzle {
                     step={100}
                     value={this.state.number}
                     onInput={e => this.onInput(e)}
-                    placeholder='Я не люблю отрицательные числа'
+                    placeholder={'I don\'t like negative numbers'}
                     style={{
                         minWidth: 300,
                     }}

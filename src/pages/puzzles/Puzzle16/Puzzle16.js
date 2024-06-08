@@ -5,7 +5,7 @@ import axios from 'axios';
 
 export default class Puzzle16 extends AbstractPuzzle {
 
-    static title = 'Головоломка 16';
+    static title = 'Puzzle 16';
 
     static propTypes = {
         ...AbstractPuzzle.propTypes,

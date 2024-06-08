@@ -5,7 +5,7 @@ import HackableButton from '../../../components/HackableButton/HackableButton.js
 
 export default class Puzzle2 extends AbstractPuzzle {
 
-    static title = 'Головоломка 2';
+    static title = 'Puzzle 2';
 
     static propTypes = {
         ...AbstractPuzzle.propTypes,
@@ -15,7 +15,7 @@ export default class Puzzle2 extends AbstractPuzzle {
         return (
             <div>
                 <HackableButton className={styles.unpressableButton} onClick={() => this.solve()}>
-                    Меня не нажмешь
+                    You can't press me
                 </HackableButton>
             </div>
         );

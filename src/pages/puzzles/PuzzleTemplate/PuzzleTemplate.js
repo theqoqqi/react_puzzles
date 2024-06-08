@@ -4,7 +4,7 @@ import AbstractPuzzle from './../../AbstractPuzzle.js';
 
 export default class PuzzleTemplate extends AbstractPuzzle {
 
-    static title = 'Головоломка Template';
+    static title = 'Puzzle Template';
 
     static propTypes = {
         ...AbstractPuzzle.propTypes,
@@ -14,7 +14,7 @@ export default class PuzzleTemplate extends AbstractPuzzle {
         return (
             <div>
                 <button onClick={() => this.solve()}>
-                    Нажми меня
+                    Press me
                 </button>
             </div>
         );

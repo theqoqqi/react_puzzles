@@ -5,7 +5,7 @@ import {FormCheck} from 'react-bootstrap';
 
 export default class Puzzle9 extends AbstractPuzzle {
 
-    static title = 'Головоломка 9';
+    static title = 'Puzzle 9';
 
     static propTypes = {
         ...AbstractPuzzle.propTypes,
@@ -15,9 +15,9 @@ export default class Puzzle9 extends AbstractPuzzle {
         super(props);
 
         this.choices = {
-            first: 'Выбери меня!',
-            second: 'Нет, меня!',
-            third: 'Лучше меня!',
+            first: 'Choose me!',
+            second: 'No, me!',
+            third: 'Better me!',
         };
         this.choiceStates = {};
 

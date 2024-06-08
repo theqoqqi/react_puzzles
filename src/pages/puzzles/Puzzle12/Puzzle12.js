@@ -6,7 +6,7 @@ import {Col, Row} from 'react-bootstrap';
 
 export default class Puzzle12 extends AbstractPuzzle {
 
-    static title = 'Головоломка 12';
+    static title = 'Puzzle 12';
 
     static propTypes = {
         ...AbstractPuzzle.propTypes,
@@ -39,12 +39,12 @@ export default class Puzzle12 extends AbstractPuzzle {
             <Row className={styles.container}>
                 <Col ref={this.firstParentRef} className={itemBoxStyles.box}>
                     <div ref={this.firstChildRef} className={itemBoxStyles.item}>
-                        Мне скучно
+                        I'm bored
                     </div>
                 </Col>
                 <Col ref={this.secondParentRef} className={itemBoxStyles.box}>
                     <div ref={this.secondChildRef} className={itemBoxStyles.item}>
-                        Мне тоже
+                        Me too
                     </div>
                 </Col>
             </Row>
