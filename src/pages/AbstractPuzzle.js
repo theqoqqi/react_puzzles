@@ -84,7 +84,7 @@ export default class AbstractPuzzle extends React.Component {
 
         LocalStorage.set('puzzles', puzzles);
 
-        window.location.href = '/result?type=solved&puzzle=' + this.puzzleId;
+        window.location.href = '../result?type=solved&puzzle=' + this.puzzleId;
     }
 
     fail() {
@@ -92,7 +92,7 @@ export default class AbstractPuzzle extends React.Component {
     }
 
     #fail() {
-        window.location.href = '/result?type=failed&puzzle=' + this.puzzleId;
+        window.location.href = '../result?type=failed&puzzle=' + this.puzzleId;
     }
 
     #makeDone(className, callback) {

@@ -13,7 +13,7 @@ import PuzzleResult from './pages/PuzzleResult/PuzzleResult.js';
 function App() {
     return (
         <Container className='d-flex flex-column justify-content-center align-items-center vh-100'>
-            <BrowserRouter>
+            <BrowserRouter basename='react_puzzles'>
                 <Routes>
                     <Route path='/' element={<PuzzleList />} />
                     <Route path='/puzzles' element={<PuzzleList />} />
