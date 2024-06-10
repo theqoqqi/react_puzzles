@@ -1,4 +1,4 @@
-// import styles from './PuzzleList.module.css';
+import styles from './PuzzleList.module.css';
 import React from 'react';
 import PuzzleLink from '../../components/PuzzleLink/PuzzleLink.js';
 import {Link} from 'react-router-dom';
@@ -41,14 +41,23 @@ export default class PuzzleList extends React.Component {
         }
 
         return (
-            <div className='d-flex flex-column'>
-                {puzzles.map((puzzle, index) =>
-                    <PuzzleLink key={puzzle.internalName} puzzle={puzzle} locked={index > lastSolvedIndex + 1} />
-                )}
-
-                <Link to='/reset' className='link-danger'>
-                    Reset progress
-                </Link>
+            <div className='d-flex flex-column align-items-center fs-5'>
+                <p>
+                    All puzzles are solved within the tab only.
+                </p>
+                <p>
+                    You can and should use Inspector.
+                </p>
+                <div className={styles.puzzleGrid}>
+                    {puzzles.map((puzzle, index) =>
+                        <PuzzleLink key={puzzle.internalName} puzzle={puzzle} locked={index > lastSolvedIndex + 1} />
+                    )}
+                </div>
+                <div>
+                    <Link to='/reset' className='link-danger'>
+                        Reset progress
+                    </Link>
+                </div>
             </div>
         );
     }
