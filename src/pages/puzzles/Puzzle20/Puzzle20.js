@@ -24,6 +24,11 @@ export default class Puzzle20 extends AbstractPuzzle {
             return;
         }
 
+        if (window.controller?.password === undefined) {
+            console.error('Password required');
+            return;
+        }
+
         if (window.controller?.password !== 'qwe123!@#') {
             console.error('Wrong password');
             return;

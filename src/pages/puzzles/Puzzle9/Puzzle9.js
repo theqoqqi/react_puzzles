@@ -16,8 +16,8 @@ export default class Puzzle9 extends AbstractPuzzle {
 
         this.choices = {
             first: 'Choose me!',
-            second: 'No, me!',
-            third: 'Better me!',
+            second: 'Me too!',
+            third: 'And me!',
         };
         this.choiceStates = {};
 
