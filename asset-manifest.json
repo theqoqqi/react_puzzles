@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react_puzzles/static/css/main.5be097cd.css",
-    "main.js": "/react_puzzles/static/js/main.a43aa435.js",
+    "main.js": "/react_puzzles/static/js/main.e1cbf34f.js",
     "static/css/911.3a295164.chunk.css": "/react_puzzles/static/css/911.3a295164.chunk.css",
     "static/js/911.f4b63326.chunk.js": "/react_puzzles/static/js/911.f4b63326.chunk.js",
     "static/css/805.493dfbad.chunk.css": "/react_puzzles/static/css/805.493dfbad.chunk.css",
@@ -17,7 +17,7 @@
     "static/css/777.31d6cfe0.chunk.css": "/react_puzzles/static/css/777.31d6cfe0.chunk.css",
     "static/js/777.84033e74.chunk.js": "/react_puzzles/static/js/777.84033e74.chunk.js",
     "static/css/572.31d6cfe0.chunk.css": "/react_puzzles/static/css/572.31d6cfe0.chunk.css",
-    "static/js/572.db5e0474.chunk.js": "/react_puzzles/static/js/572.db5e0474.chunk.js",
+    "static/js/572.0679db0a.chunk.js": "/react_puzzles/static/js/572.0679db0a.chunk.js",
     "static/css/499.31d6cfe0.chunk.css": "/react_puzzles/static/css/499.31d6cfe0.chunk.css",
     "static/js/499.8902262d.chunk.js": "/react_puzzles/static/js/499.8902262d.chunk.js",
     "static/css/954.1c6b8ec1.chunk.css": "/react_puzzles/static/css/954.1c6b8ec1.chunk.css",
@@ -38,11 +38,11 @@
     "static/css/486.31d6cfe0.chunk.css": "/react_puzzles/static/css/486.31d6cfe0.chunk.css",
     "static/js/486.95493493.chunk.js": "/react_puzzles/static/js/486.95493493.chunk.js",
     "static/css/479.31d6cfe0.chunk.css": "/react_puzzles/static/css/479.31d6cfe0.chunk.css",
-    "static/js/479.b078c47e.chunk.js": "/react_puzzles/static/js/479.b078c47e.chunk.js",
+    "static/js/479.6e3d69bc.chunk.js": "/react_puzzles/static/js/479.6e3d69bc.chunk.js",
     "static/js/787.cfe7639d.chunk.js": "/react_puzzles/static/js/787.cfe7639d.chunk.js",
     "index.html": "/react_puzzles/index.html",
     "main.5be097cd.css.map": "/react_puzzles/static/css/main.5be097cd.css.map",
-    "main.a43aa435.js.map": "/react_puzzles/static/js/main.a43aa435.js.map",
+    "main.e1cbf34f.js.map": "/react_puzzles/static/js/main.e1cbf34f.js.map",
     "911.3a295164.chunk.css.map": "/react_puzzles/static/css/911.3a295164.chunk.css.map",
     "911.f4b63326.chunk.js.map": "/react_puzzles/static/js/911.f4b63326.chunk.js.map",
     "805.493dfbad.chunk.css.map": "/react_puzzles/static/css/805.493dfbad.chunk.css.map",
@@ -54,7 +54,7 @@
     "958.f112d005.chunk.js.map": "/react_puzzles/static/js/958.f112d005.chunk.js.map",
     "480.4f19a7b4.chunk.js.map": "/react_puzzles/static/js/480.4f19a7b4.chunk.js.map",
     "777.84033e74.chunk.js.map": "/react_puzzles/static/js/777.84033e74.chunk.js.map",
-    "572.db5e0474.chunk.js.map": "/react_puzzles/static/js/572.db5e0474.chunk.js.map",
+    "572.0679db0a.chunk.js.map": "/react_puzzles/static/js/572.0679db0a.chunk.js.map",
     "499.8902262d.chunk.js.map": "/react_puzzles/static/js/499.8902262d.chunk.js.map",
     "954.1c6b8ec1.chunk.css.map": "/react_puzzles/static/css/954.1c6b8ec1.chunk.css.map",
     "954.f087b5e9.chunk.js.map": "/react_puzzles/static/js/954.f087b5e9.chunk.js.map",
@@ -70,11 +70,11 @@
     "931.41bff6f0.chunk.js.map": "/react_puzzles/static/js/931.41bff6f0.chunk.js.map",
     "630.92cd03e0.chunk.js.map": "/react_puzzles/static/js/630.92cd03e0.chunk.js.map",
     "486.95493493.chunk.js.map": "/react_puzzles/static/js/486.95493493.chunk.js.map",
-    "479.b078c47e.chunk.js.map": "/react_puzzles/static/js/479.b078c47e.chunk.js.map",
+    "479.6e3d69bc.chunk.js.map": "/react_puzzles/static/js/479.6e3d69bc.chunk.js.map",
     "787.cfe7639d.chunk.js.map": "/react_puzzles/static/js/787.cfe7639d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.5be097cd.css",
-    "static/js/main.a43aa435.js"
+    "static/js/main.e1cbf34f.js"
   ]
 }
