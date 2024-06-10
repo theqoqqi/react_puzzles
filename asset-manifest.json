@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react_puzzles/static/css/main.78f72309.css",
-    "main.js": "/react_puzzles/static/js/main.53784d25.js",
+    "main.js": "/react_puzzles/static/js/main.c3513c14.js",
     "static/css/911.3a295164.chunk.css": "/react_puzzles/static/css/911.3a295164.chunk.css",
     "static/js/911.f4b63326.chunk.js": "/react_puzzles/static/js/911.f4b63326.chunk.js",
     "static/css/805.493dfbad.chunk.css": "/react_puzzles/static/css/805.493dfbad.chunk.css",
@@ -42,7 +42,7 @@
     "static/js/787.cfe7639d.chunk.js": "/react_puzzles/static/js/787.cfe7639d.chunk.js",
     "index.html": "/react_puzzles/index.html",
     "main.78f72309.css.map": "/react_puzzles/static/css/main.78f72309.css.map",
-    "main.53784d25.js.map": "/react_puzzles/static/js/main.53784d25.js.map",
+    "main.c3513c14.js.map": "/react_puzzles/static/js/main.c3513c14.js.map",
     "911.3a295164.chunk.css.map": "/react_puzzles/static/css/911.3a295164.chunk.css.map",
     "911.f4b63326.chunk.js.map": "/react_puzzles/static/js/911.f4b63326.chunk.js.map",
     "805.493dfbad.chunk.css.map": "/react_puzzles/static/css/805.493dfbad.chunk.css.map",
@@ -75,6 +75,6 @@
   },
   "entrypoints": [
     "static/css/main.78f72309.css",
-    "static/js/main.53784d25.js"
+    "static/js/main.c3513c14.js"
   ]
 }
