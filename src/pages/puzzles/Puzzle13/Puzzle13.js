@@ -23,7 +23,7 @@ export default class Puzzle13 extends AbstractPuzzle {
         let children = Array.from(this.parentRef.current.children);
 
         if (children.length > 1 && this.childRef.current.isConnected) {
-            children.forEach(child => child.textContent = 'Уиииии!');
+            children.forEach(child => child.textContent = 'Wheeee!');
             this.solve();
         }
     }

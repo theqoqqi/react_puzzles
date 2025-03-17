@@ -38,7 +38,7 @@ export default class Puzzle14 extends AbstractPuzzle {
         return (
             <div>
                 <div className={styles.ball} ref={this.ballRef}>
-                    I want into the box!
+                    I wanna get in the box!
                 </div>
                 <div className={styles.box} ref={this.boxRef}>
                     I'm the box

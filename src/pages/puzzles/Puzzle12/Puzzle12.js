@@ -28,8 +28,8 @@ export default class Puzzle12 extends AbstractPuzzle {
             || firstParent === this.secondParentRef.current;
 
         if (firstParent === secondParent && isValidParent) {
-            this.firstChildRef.current.textContent = 'Уиииии!';
-            this.secondChildRef.current.textContent = 'Уиииииии!';
+            this.firstChildRef.current.textContent = 'Wheeee!';
+            this.secondChildRef.current.textContent = 'Wheeeeee!';
             this.solve();
         }
     }
