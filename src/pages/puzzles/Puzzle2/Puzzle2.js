@@ -5,7 +5,7 @@ import HackableButton from '../../../components/HackableButton/HackableButton.js
 
 export default class Puzzle2 extends AbstractPuzzle {
 
-    static title = 'Puzzle 2';
+    static title = 'Buttons 2';
 
     static propTypes = {
         ...AbstractPuzzle.propTypes,

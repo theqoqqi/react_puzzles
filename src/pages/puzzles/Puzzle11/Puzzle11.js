@@ -5,7 +5,7 @@ import {Col, Row} from 'react-bootstrap';
 
 export default class Puzzle11 extends AbstractPuzzle {
 
-    static title = 'Puzzle 11';
+    static title = 'Containers 1';
 
     static propTypes = {
         ...AbstractPuzzle.propTypes,

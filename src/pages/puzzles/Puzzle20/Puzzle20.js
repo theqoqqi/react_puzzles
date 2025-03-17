@@ -4,7 +4,7 @@ import AbstractPuzzle from './../../AbstractPuzzle.js';
 
 export default class Puzzle20 extends AbstractPuzzle {
 
-    static title = 'Puzzle 20';
+    static title = 'Scripts 5';
 
     static propTypes = {
         ...AbstractPuzzle.propTypes,

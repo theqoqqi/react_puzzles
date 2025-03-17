@@ -5,7 +5,7 @@ import {FormCheck} from 'react-bootstrap';
 
 export default class Puzzle9 extends AbstractPuzzle {
 
-    static title = 'Puzzle 9';
+    static title = 'Inputs 4';
 
     static propTypes = {
         ...AbstractPuzzle.propTypes,

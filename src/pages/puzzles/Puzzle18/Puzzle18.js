@@ -4,7 +4,7 @@ import {Button} from 'react-bootstrap';
 
 export default class Puzzle18 extends AbstractPuzzle {
 
-    static title = 'Puzzle 18';
+    static title = 'Scripts 3';
 
     static propTypes = {
         ...AbstractPuzzle.propTypes,
